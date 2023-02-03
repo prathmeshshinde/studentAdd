@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.active {
+  background-color: #f33823;
+  color: white;
+  border-radius: 5px;
+}
+
+.active svg g path {
+  fill: white;
+}
+
+svg g path {
+  fill: rgba(0, 0, 0, 0.6);
+}
+
+/*------------- Header ----------------*/
+
+.section-header {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.section-mail {
+  display: flex;
+  border: 2px solid rgb(205, 205, 205);
+  padding: 10px 40px;
+  border-radius: 5px;
+}
+
+.username {
+  padding: 0px 10px;
+}
+
+/*------------- Navbar ----------------*/
+
+.section-navbar {
+  width: 20vw;
+}
+
+.section-navbar-active {
+  display: flex;
+
+  padding: 10px;
+  width: 200px;
+  align-items: center;
+}
+.section-add {
+  display: flex;
+  width: 18vw;
+  padding: 10px 0px;
+}
+
+.icon-text {
+  padding: 0px 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.section-list {
+  display: flex;
+}
+
+.section-logout {
+  display: flex;
+  cursor: pointer;
+}
+
+.nav-image {
+  width: 24px;
+}
+
+.nav-image-grey {
+  width: 24px;
+}
+
+.section-page {
+  display: flex;
+  justify-content: center;
+  width: 80vw;
+}
+
+/*------------- Form ----------------*/
+
+.add-student-text {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.section-form {
+  width: 80vw;
+}
+
+.section-form-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-student-first {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: 17vw;
+  outline: none;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.section-student-select {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: 17vw;
+  outline: none;
+}
+
+.section-student-add {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: 40%;
+  outline: none;
+}
+
+.section-add-student {
+  margin: 10px;
+  background-color: #f33823;
+  border: none;
+  padding: 10px 10px;
+  width: 17vw;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+}
+
+/*------------- Student ----------------*/
+
+.section-student-list {
+  width: 80vw;
+}
+
+.section-icon {
+  width: 24px;
+  padding: 10px;
+}
+
+table {
+  width: 100%;
+  margin: 40px 0px;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: #f33823;
+  color: white;
+  font-size: 16px;
+  padding: 15px 0px;
+}
+
+tr:nth-child(odd) {
+  background: #fff6f5;
+}
+
+tr {
+  text-align: center;
+}
+
+/*------------- View ----------------*/
+
+.section-view {
+  width: 80vw;
+}
+
+.section-student-view {
+  display: flex;
+}
+
+.view-title {
+  font-weight: 600;
+}
+
+/*------------- Edit ----------------*/
+
+.section-edit {
+  width: 80vw;
+}
+
+/*------------- LOGIN ----------------*/
+
+.section-login {
+  background-color: #dfe0ff;
+  display: flex;
+  width: 300px;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-login-form input {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: 200px;
+  outline: none;
+}
+
+.section-login-button {
+  display: flex;
+  justify-content: center;
+}
+
+.login-button {
+  padding: 8px 35px;
+  font-size: 16px;
+  background-color: #23f381;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
