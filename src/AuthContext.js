@@ -19,7 +19,6 @@ export function AuthProvider({ children }) {
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       setCurrentUser(user);
-      console.log(user);
       if (!user) {
         navigate("/login");
       } else {
@@ -29,7 +28,6 @@ export function AuthProvider({ children }) {
 
     return unsubscribe;
   }, []);
-  console.log("called", children);
 
   const value = { currentUser, signUp };
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

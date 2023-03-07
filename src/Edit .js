@@ -4,21 +4,25 @@ import { useLocation } from "react-router-dom";
 import { db } from "./firebase-config";
 
 const Edit = () => {
-  const [updateFirst, setUpdateFirst] = useState("");
-  const [updateMiddle, setUpdateMiddle] = useState("");
-  const [updateLast, setUpdateLast] = useState("");
-  const [updateClass, setUpdateClass] = useState("");
-  const [updateDiv, setUpdateDiv] = useState("");
-  const [updateAddressLine1, setUpdateAddressLine1] = useState("");
-  const [updateRollNo, setUpdateRollNo] = useState("");
-  const [updateAddressLine2, setUpdateAddressLine2] = useState("");
-  const [updateLandmark, setUpdateLandmark] = useState("");
-  const [updateCity, setUpdateCity] = useState("");
-  const [updatePincode, setUpdatePincode] = useState("");
-
   const location = useLocation();
   const editData = location.state.student;
   console.log(editData);
+
+  const [updateFirst, setUpdateFirst] = useState(editData.firstname);
+  const [updateMiddle, setUpdateMiddle] = useState(editData.middlename);
+  const [updateLast, setUpdateLast] = useState(editData.lastname);
+  const [updateClass, setUpdateClass] = useState(editData.class);
+  const [updateDiv, setUpdateDiv] = useState(editData.div);
+  const [updateAddressLine1, setUpdateAddressLine1] = useState(
+    editData.addressline1
+  );
+  const [updateRollNo, setUpdateRollNo] = useState(editData.rollNo);
+  const [updateAddressLine2, setUpdateAddressLine2] = useState(
+    editData.addressline2
+  );
+  const [updateLandmark, setUpdateLandmark] = useState(editData.landmark);
+  const [updateCity, setUpdateCity] = useState(editData.city);
+  const [updatePincode, setUpdatePincode] = useState(editData.pincode);
 
   const updateStudent = async (e) => {
     e.preventDefault();
@@ -58,6 +62,7 @@ const Edit = () => {
             className="section-student-first"
             value={updateFirst}
             onChange={(e) => setUpdateFirst(e.target.value)}
+            placeholder="Update First Name"
           />
           <input
             type="text"
@@ -66,6 +71,7 @@ const Edit = () => {
             onChange={(e) => {
               setUpdateMiddle(e.target.value);
             }}
+            placeholder="Update Middle Name"
           />
           <input
             type="text"
@@ -74,6 +80,7 @@ const Edit = () => {
             onChange={(e) => {
               setUpdateLast(e.target.value);
             }}
+            placeholder="Update Last Name"
           />
         </div>
         <div>
@@ -125,13 +132,14 @@ const Edit = () => {
             onChange={(e) => {
               setUpdateRollNo(e.target.value);
             }}
+            placeholder="Update Roll No"
           />
         </div>
         <div>
           <input
             type="text"
             className="section-student-add"
-            placeholder="Address Line 1"
+            placeholder="Update Address Line 1"
             value={updateAddressLine1}
             onChange={(e) => {
               setUpdateAddressLine1(e.target.value);
@@ -140,7 +148,7 @@ const Edit = () => {
           <input
             type="text"
             className="section-student-add"
-            placeholder="Address Line 2"
+            placeholder="Update Address Line 2"
             value={updateAddressLine2}
             onChange={(e) => {
               setUpdateAddressLine2(e.target.value);
@@ -152,7 +160,7 @@ const Edit = () => {
             type="text"
             value={updateLandmark}
             className="section-student-first"
-            placeholder="Landmark"
+            placeholder="Update Landmark"
             onChange={(e) => {
               setUpdateLandmark(e.target.value);
             }}
@@ -160,7 +168,7 @@ const Edit = () => {
           <input
             type="text"
             value={updateCity}
-            placeholder="City"
+            placeholder="Update City"
             className="section-student-first"
             onChange={(e) => {
               setUpdateCity(e.target.value);
@@ -171,7 +179,7 @@ const Edit = () => {
             maxLength="6"
             pattern="\d{6}"
             className="section-student-first"
-            placeholder="Pincode"
+            placeholder="Update Pincode"
             value={updatePincode}
             onChange={(e) => {
               setUpdatePincode(e.target.value);

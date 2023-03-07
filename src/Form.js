@@ -14,7 +14,6 @@ const Form = ({ studentCollectionRef }) => {
   const [landmark, setLandmark] = useState("");
   const [city, setCity] = useState("");
   const [pin, setPin] = useState("");
-  console.log("called");
 
   const addStudent = async (e) => {
     e.preventDefault();
@@ -43,7 +42,6 @@ const Form = ({ studentCollectionRef }) => {
     setLandmark("");
     setCity("");
     setPin("");
-    console.log(first, middle, last);
   };
 
   return (

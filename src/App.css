@@ -207,10 +207,15 @@ tr {
 .section-login {
   background-color: #dfe0ff;
   display: flex;
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 350px;
   justify-content: center;
   align-items: center;
+  border-radius: 10px;
+}
+.error-message {
+  font-size: 12px;
+  font-weight: 700;
 }
 
 .section-login-form {
@@ -219,7 +224,6 @@ tr {
 }
 
 .section-login-form input {
-  margin: 10px;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -239,4 +243,13 @@ tr {
   outline: none;
   border: none;
   border-radius: 5px;
+  transition: background-color 0.8s ease-out;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  /* background-color: #83a0ff; */
+  background-color: #8185ff;
+  color: #fff;
 }

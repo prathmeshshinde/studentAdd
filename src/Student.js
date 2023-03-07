@@ -14,7 +14,6 @@ const Student = ({ studentCollectionRef }) => {
     };
 
     getStudents();
-    console.log(students);
   }, []);
 
   const viewStudent = async (id) => {
@@ -25,7 +24,7 @@ const Student = ({ studentCollectionRef }) => {
     await deleteDoc(doc(db, "students", id));
 
     const updatedStudents = students.filter((student) => student.id !== id);
-    console.log(updatedStudents);
+
     setStudents(updatedStudents);
   };
 

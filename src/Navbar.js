@@ -13,7 +13,7 @@ const Navbar = ({ authLogout }) => {
   const LogOutUser = async () => {
     await signOut(auth.currentUser.auth);
   };
-  console.log(auth);
+
   return !auth.currentUser ? null : (
     <div className="section-navbar">
       <div>
