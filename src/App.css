@@ -221,16 +221,20 @@ tr {
 .section-login-form {
   display: flex;
   flex-direction: column;
+  padding: 10px;
 }
 
 .section-login-form input {
-  padding: 10px;
+  padding: 10px 0px 10px 0px;
   border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  width: 200px;
+  width: 100%;
   outline: none;
 }
 
+.section-login-form input::placeholder {
+  padding: 10px;
+}
 .section-login-button {
   display: flex;
   justify-content: center;
@@ -246,10 +250,37 @@ tr {
   transition: background-color 0.8s ease-out;
   font-weight: 500;
   cursor: pointer;
+  margin: 0px 5px;
 }
 
 .login-button:hover {
   /* background-color: #83a0ff; */
   background-color: #8185ff;
   color: #fff;
+}
+
+@media screen and (max-width: 1300px) {
+  .section-page {
+    flex-direction: column;
+  }
+
+  .section-navbar {
+    width: 100%;
+  }
+
+  .section-navbar-main {
+    display: flex;
+    justify-content: end;
+    margin: 10px 0px;
+  }
+
+  .section-navbar-active {
+    width: 100%;
+  }
+  .section-add {
+    width: auto;
+  }
+  .section-list {
+    padding: 10px 0px;
+  }
 }

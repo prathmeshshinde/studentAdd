@@ -6,7 +6,6 @@ import { db } from "./firebase-config";
 const Edit = () => {
   const location = useLocation();
   const editData = location.state.student;
-  console.log(editData);
 
   const [updateFirst, setUpdateFirst] = useState(editData.firstname);
   const [updateMiddle, setUpdateMiddle] = useState(editData.middlename);

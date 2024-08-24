@@ -7,7 +7,7 @@ import { signOut } from "firebase/auth";
 // import { auth } from "./firebase-config";
 import { useAuth } from "./AuthContext";
 
-const Navbar = ({ authLogout }) => {
+const Navbar = () => {
   const auth = useAuth();
 
   const LogOutUser = async () => {
@@ -16,7 +16,7 @@ const Navbar = ({ authLogout }) => {
 
   return !auth.currentUser ? null : (
     <div className="section-navbar">
-      <div>
+      <div className="section-navbar-main">
         <div className="section-add">
           <NavLink to="/">
             <div className="section-navbar-active">

@@ -2,7 +2,7 @@ import React from "react";
 import { useAuth } from "./AuthContext";
 import { ReactComponent as User } from "./assets/user.svg";
 
-const Header = ({ user }) => {
+const Header = () => {
   const auth = useAuth();
 
   return (
@@ -10,13 +10,15 @@ const Header = ({ user }) => {
       <div>
         <p className="logo">LOGO</p>
       </div>
-      <div className="section-mail">
-        <div className="username">
-          <User />
-        </div>
+      {!auth.currentUser ? null : (
+        <div className="section-mail">
+          <div className="username">
+            <User />
+          </div>
 
-        <p className="username">{auth.currentUser?.email}</p>
-      </div>
+          <p className="username">{auth.currentUser?.email}</p>
+        </div>
+      )}
     </div>
   );
 };

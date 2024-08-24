@@ -16,10 +16,6 @@ const Student = ({ studentCollectionRef }) => {
     getStudents();
   }, []);
 
-  const viewStudent = async (id) => {
-    const viewInfo = students.find((items) => items.id === id);
-  };
-
   const deleteStudent = async (id) => {
     await deleteDoc(doc(db, "students", id));
 
